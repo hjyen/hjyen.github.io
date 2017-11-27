@@ -30,8 +30,8 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  margin: 0 0 20px 0;
+  font-weight: 500;
+  margin: 10px 0 20px 0;
   padding: 0;
 }
 
@@ -84,27 +84,12 @@ h1, h2, h3, h4, h5, h6 {
 #header {
   padding: 30px 0;
   height: 92px;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   right: 0;
   transition: all 0.5s;
   z-index: 997;
-}
-
-
-#header #logo img {
-  padding: 0;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  #header #logo h1 {
-    font-size: 26px;
-  }
-  #header #logo img {
-    max-height: 40px;
-  }
 }
 
 #header.header-fixed {
@@ -128,10 +113,16 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
 }
 
+
+
 @media (max-width: 767px) {
 #hero {
     background-attachment: initial;
   }
+}
+
+#hero #logo img {
+  width: 50%;
 }
 
 
@@ -158,10 +149,14 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 28px;
     line-height: 36px;
   }
+
+  #hero #logo img {
+  width: 70%;
+  }
 }
 
 #hero h2 {
-  color: #eee;
+  color: #fff;
   margin-bottom: 50px;
   margin-top: 5px;
   font-size: 24px;
@@ -190,18 +185,11 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   transition: 0.5s;
   margin: 10px;
-/*  border: 2px solid #fff;*/
-/*  color: #fff;*/
   background: #A9C6CE;
   border: 2px solid #A9C6CE;
   color: #3F434D;
 }
 
-/*#hero .btn-get-started:hover {
-  background: #A9C6CE;
-  border: 2px solid #A9C6CE;
-  color: #3F434D;
-}*/
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -283,12 +271,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 18px;
   outline: none;
 }
 
 .nav-menu .external-link{
-  color: #614933;
+  color: #FBC56C;
 }
 
 .nav-menu > li {
@@ -309,6 +297,8 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
+
+
 
 .nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .menu-active > a:before {
   visibility: visible;
@@ -510,6 +500,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media (max-width: 768px) {
   #about .about-container .title {
     text-align: center;
+  }
+  #about .about-container .background {
+    margin: 80px 15px 0 15px;
 
   }
 }
@@ -522,61 +515,29 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 
-@media (max-width: 768px) {
-  #about .about-container .title {
-    padding-top: 15px;
-  }
-}
-
-
-
 #about .about-container p {
   line-height: 26px;
   color: #fff;
   font-size: 18px;
+}
 
+@media (max-width: 768px) {
+  #about .about-container .title {
+    padding-top: 15px;
+  }
+  #about .about-container .intro-title {
+    text-align: center;
+  }
+
+  #about .about-container p {
+    text-align: center;
+  }
 }
 
 #about .about-container p:last-child {
   margin-bottom: 0;
 }
 
-#about .about-container .icon-box {
-  background: #fff;
-  background-size: cover;
-  padding: 0 0 30px 0;
-}
-
-#about .about-container .icon-box .icon {
-  float: left;
-  background: #fff;
-  padding: 16px;
-  border-radius: 50%;
-  border: 2px solid #2dc997;
-}
-
-#about .about-container .icon-box .icon i {
-  color: #2dc997;
-  font-size: 24px;
-}
-
-#about .about-container .icon-box .title {
-  margin-left: 80px;
-  font-weight: 500;
-  margin-bottom: 5px;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
-#about .about-container .icon-box .title a {
-  color: #111;
-}
-
-#about .about-container .icon-box .description {
-  margin-left: 80px;
-  line-height: 24px;
-  font-size: 14px;
-}
 
 /* Call To Video Section
 --------------------------------*/
@@ -751,10 +712,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   vertical-align: middle;
   color: #333;
-  padding: 20px; 
+  padding: 0px; 
   font-size: 20px;
   margin: auto 0;
-  font-weight: 500;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  padding: 30px;
 }
 
 
@@ -786,8 +749,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #team .member {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
+
 
 #team .member .pic {
   margin-bottom: 15px;
@@ -831,6 +795,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 #footer .copyright {
   text-align: center;
   padding: 40px 0; 
+}
+
+@media (max-width: 767px) {
+#footer .copyright {
+    padding: 20px 0; 
+  }
 }
 
 #footer .credits {
