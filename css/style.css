@@ -128,6 +128,12 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
 }
 
+@media (max-width: 767px) {
+#hero {
+    background-attachment: initial;
+  }
+}
+
 
 #hero .hero-container {
   background: rgba(0, 0, 0, 0.1);
@@ -485,7 +491,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   max-height: 100vh;
   background: url(../img/product_render.gif) #fff center no-repeat;
   background-size: contain;
-  margin-top: 80px;
+  margin: auto;
+  margin-top: 80px; 
   border-radius: 30px;
 }
 
@@ -582,8 +589,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 #video .video-box {
   position: relative;
   margin:0 auto;
-  padding-top: 150px;
-  padding-bottom: 150px; 
+  padding-top: 120px;
+  padding-bottom: 120px; 
 }
 
 #video .h_iframe        {
@@ -614,9 +621,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #services .box {
-  padding: 50px 50px;
+  padding: 50px 20px;
   margin-top: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   text-align: center;
   height: 200px;
   position: relative;
@@ -716,6 +723,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 100vh;
 }
 
+@media (max-width: 767px) {
+#call-to-action {
+    background-attachment: initial;
+  }
+}
+
 
 #call-to-action .text-cover {
   position: relative;
@@ -725,7 +738,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #call-to-action .text-box {
   position: absolute;
   background: rgba(251, 197, 108, 0.7);
-  top: 150px;
+  top: 120px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
@@ -744,6 +757,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-weight: 500;
 }
 
+
+@media (max-width: 768px) {
+  #call-to-action p {
+    font-size: 16px;
+  }
+
+}
+
 @media (min-width: 769px) {
   #call-to-action .cta-btn-container {
     display: flex;
@@ -751,6 +772,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     justify-content: flex-end;
   }
 }
+
+
 
 
 /* Team Section
@@ -807,6 +830,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer .copyright {
   text-align: center;
+  padding: 40px 0; 
 }
 
 #footer .credits {
