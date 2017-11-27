@@ -92,17 +92,6 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 997;
 }
 
-/*#header #logo h1 {
-  font-size: 36px;
-  margin: 0;
-  padding: 6px 0;
-  line-height: 1;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-*/
 
 #header #logo img {
   padding: 0;
@@ -119,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-fixed {
-  background: rgba(52, 59, 64, 0.5);
+  background: rgba(52, 59, 64, 0.7);
   padding: 20px 0;
   height: 72px;
   transition: all 0.5s;
@@ -132,12 +121,16 @@ h1, h2, h3, h4, h5, h6 {
   display: table;
   width: 100%;
   min-height: 100vh;
-  background: url(../img/hero-bg2.jpg) bottom center fixed;
+  background: url(../img/hero-bg2.jpg) no-repeat bottom center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
+
 #hero .hero-container {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.1);
   display: table-cell;
   margin: 0;
   padding: 0 10px;
@@ -303,7 +296,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #A9C6CE;
+  background-color: #fff;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -470,7 +463,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .section-header .section-description {
@@ -483,8 +476,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 #about {
   background: #3F434D;
-  padding: 80px 0;
-  min-height: 100vh;
+  padding: 100px 0;
+/*  min-height: 100vh;*/
 }
 
 #about .about-container .background {
@@ -492,18 +485,26 @@ body.mobile-nav-active #mobile-nav-toggle {
   max-height: 100vh;
   background: url(../img/product_render.gif) #fff center no-repeat;
   background-size: contain;
-  margin-bottom: 30px;
-  margin-top: 10px;
-  border-color: #3F434D;
-  border-style: solid;
-  border-width: 60px 80px 20px 60px;
+  margin-top: 80px;
+  border-radius: 30px;
 }
 
+#about .about-container .right {
+  margin: auto;
+}
 
 #about .about-container .title {
   color: #fff;
   font-weight: 700;
   font-size: 32px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  #about .about-container .title {
+    text-align: center;
+
+  }
 }
 
 #about .about-container .intro-title{
@@ -513,15 +514,19 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 0;
 }
 
+
 @media (max-width: 768px) {
   #about .about-container .title {
     padding-top: 15px;
   }
 }
 
+
+
 #about .about-container p {
   line-height: 26px;
   color: #fff;
+  font-size: 18px;
 
 }
 
@@ -566,14 +571,46 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 14px;
 }
 
+/* Call To Video Section
+--------------------------------*/
+#video {
+  background: #A9C6CE fixed center center;
+  background-size: cover;
+  /*min-height: 100vh;*/
+}
+
+#video .video-box {
+  position: relative;
+  margin:0 auto;
+  padding-top: 150px;
+  padding-bottom: 150px; 
+}
+
+#video .h_iframe        {
+  position:relative;
+}
+
+#video .h_iframe .ratio {
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+#video .h_iframe iframe {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;}
+
 
 /* Services Section
 --------------------------------*/
 #services {
   background: #3F434D;
   background-size: cover;
-  padding: 80px 0 60px 0;
-  min-height: 100vh;
+  padding: 100px 0;
+/*  min-height: 100vh;*/
 }
 
 #services .box {
@@ -641,7 +678,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #services .title {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 15px;
   text-transform: uppercase;
   color: #fff;
@@ -652,7 +689,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #services .description {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   color: #FBC56C;
 }
@@ -663,45 +700,18 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 
-/* Call To Video Section
---------------------------------*/
-#video {
-  background: #A9C6CE fixed center center;
-  background-size: cover;
-  /*min-height: 100vh;*/
-}
-
-#video .video-box {
-  position: relative;
-  margin:0 auto;
-  padding-top: 60px;
-  padding-bottom: 60px; 
-}
-
-#video .h_iframe        {
-  position:relative;
-}
-
-#video .h_iframe .ratio {
-  display:block;
-  width:100%;
-  height:auto;
-}
-
-#video .h_iframe iframe {
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;}
-
-
 
 /* Userstory Section
 --------------------------------*/
 #call-to-action {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/user-story-bg1.jpg) fixed bottom center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/user-story-bg1.jpg) no-repeat fixed center center;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: table;
+  width: 100%;
 /*  padding: 80px 0;*/
   height: 100vh;
 }
@@ -715,7 +725,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #call-to-action .text-box {
   position: absolute;
   background: rgba(251, 197, 108, 0.7);
-  top: 100px;
+  top: 150px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
@@ -747,7 +757,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 #team {
   background: #fff;
-  padding: 80px 0 60px 0;
+  padding: 100px 0;
   min-height: 80vh;
 }
 
@@ -769,14 +779,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #team .member h4 {
   font-weight: 700;
-  margin-bottom: 2px;
-  font-size: 18px;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 #team .member span {
-  font-style: italic;
   display: block;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 
