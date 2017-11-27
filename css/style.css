@@ -1,9 +1,3 @@
-/*
-  Theme Name: Regna
-  Theme URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
-  Author: BootstrapMade.com
-  License: https://bootstrapmade.com/license/
-*/
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -93,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-fixed {
-  background: rgba(52, 59, 64, 0.7);
+  background: rgba(52, 59, 64, 0.9);
   padding: 20px 0;
   height: 72px;
   transition: all 0.5s;
@@ -799,7 +793,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 767px) {
 #footer .copyright {
-    padding: 20px 0; 
+    padding: 10px 0; 
   }
 }
 
